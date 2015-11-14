@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Masters bedroom",
+    "description": "Very large room",
+    "location": "2nd floor"
+  },
+  {
+    "name": "Kitchen",
+    "description": "Nice little kitchen",
+    "location": "1nd floor"
+  },
+  {
+    "name": "Bedroom #1",
+    "description": "Another bedroom",
+    "location": "2nd floor"
+  },
+  {
+    "name": "Bedroom #2",
+    "description": "Another bedroom",
+    "location": "2nd floor"
+  },
+  {
+    "name": "Bedroom #3",
+    "description": "Guest bedroom",
+    "location": "1nd floor"
+  },
+  {
+    "name": "Guest room",
+    "description": "Large room for social gathering",
+    "location": "1nd floor"
+  },
+  {
+    "name": "Garage",
+    "description": "Garage for two cars",
+    "location": "1nd floor"
+  }
+]

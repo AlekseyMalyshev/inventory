@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+  head
+    title Super Inventory Manager
+    link(href="/bootstrap/dist/css/bootstrap.min.css", rel="stylesheet")
+    link(href="/font-awesome/css/font-awesome.min.css", rel="stylesheet")
+    link(href="css/styles.css", rel="stylesheet")
+  body
+    .containter
+      .col-sm-12.top
+        h2.title Super Inventory Manager
+        hr.colorgraph.separator
+        i.fa.fa-plus-square-o.pull-right.new-room(title="New Room")
+      .col-sm-12.rooms
+        .house
+          include ./rooms
+          include ./unlisted
+
+    include ./modal
+
+    script(src="/jquery/dist/jquery.min.js")
+    script(src="/bootstrap/dist/js/bootstrap.min.js")
+    script(src="js/main.js")

@@ -1,0 +1,40 @@
+.room
+  table.room
+    tbody
+      tr
+        td.icon
+          i.fa.fa-tags(title="Show Items")
+        td.unlisted Unlisted Items, that are not assigned to a room
+        td.icon
+          i.fa.fa-plus-square-o.new-item(title="New Item")
+  table.items
+    tbody.unlisted
+      each item in unlisted
+        tr(id='id_' + item.item._id)
+          td.icon
+            i.fa.fa-tag.edit-item(title="Edit Item")
+          td.text.name= item.item.name
+          td.text.desc= item.item.description
+          td.text.picture
+            if item.item.picture
+              a(href=item.item.picture) picture url
+          td.text.value= '$' + item.item.value
+          td.text
+            select.to-room
+              option(selected)
+              each room in rooms
+                option(value='id_' + room._id)=room.name
+          td.icon
+            i.fa.fa-sign-in.move-item(title="Move to the Room")
+          td.icon
+            i.fa.fa-trash-o.delete-item(title="Delete Item")
+      if unlisted.length > 0
+        tr
+          td.text
+          td.text.total Total value:
+          td.text
+          td.text
+          td.text.total= '$' + unlisted.reduce(function(total, item) {return total + item.item.value;}, 0)
+          td.text
+          td.text
+          td.text

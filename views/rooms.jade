@@ -1,0 +1,35 @@
+each room in rooms
+  .room(id='id_' + room._id)
+    table.room
+      tbody
+        tr
+          td.icon
+            i.fa.fa-tags(title="Show Items")
+          td.text.name= room.name
+          td.text.desc= room.description
+          td.text.loc= room.location
+          td.icon
+            i.fa.fa-pencil-square-o.edit-room(title="Edit Room Details")
+          td.icon
+            i.fa.fa-trash-o.delete-room(title="Delete Room")
+    table.items
+      tbody
+        each item in room.items
+          tr(id='id_' + item._id)
+            td.icon
+              i.fa.fa-tag.edit-item(title="Edit Item")
+            td.text.name= item.name
+            td.text.desc= item.description
+            td.text.picture
+              if item.picture
+                a(href=item.picture) picture url
+            td.text.value= '$' + item.value
+            td.icon
+              i.fa.fa-sign-out.unlist-item(title="Unlist Item")
+        tr
+          td.text
+          td.text.total Total value:
+          td.text
+          td.text
+          td.text.total= '$' + room.items.reduce(function(total, item) {return total + item.value;}, 0)
+          td.text

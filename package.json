@@ -1,0 +1,28 @@
+{
+  "name": "inventory",
+  "version": "1.0.0",
+  "description": "Super Inventory Manager",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:AlekseyMalyshev/inventory.git"
+  },
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "postinstall": "./node_modules/bower/bin/bower install",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "5.0.0"
+  },
+  "author": "Aleksey Malyshev",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "bower": "^1.6.5",
+    "express": "^4.13.3",
+    "jade": "^1.11.0",
+    "mongoose": "^4.2.5",
+    "morgan": "^1.6.1"
+  }
+}
